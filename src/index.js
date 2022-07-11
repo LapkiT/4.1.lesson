@@ -2,6 +2,7 @@
 import products from "./data_module";
 // импортирует полезные функции
 import { addHtml, clearHtml } from "./utils";
+import "./styles.css";
 
 let totalPrice = 0;
 const cart = {};
@@ -24,7 +25,7 @@ function renderItem({ name, price, count }) {
 
     addHtml(`
     <p>
-      ${name} [ ${price} руб ] - ${count} шт
+      ${name} [ ${price} <i class="bi bi-cash"></i> ] - ${count} шт
       <button class="addTocart" data-name="${name}" data-price="${price}">
         Добавить
       </button>
